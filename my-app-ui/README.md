@@ -14,3 +14,5 @@ npm run serve
 ```
 npm run build
 ```
+
+### 主要体验的有vue ui vue.config.js axios element-ui 跨域
