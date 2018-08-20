@@ -112,7 +112,7 @@
 		display: block;
 	}
 
-	/deep/ .login-btn .el-form-item__content {
+	 .login-btn /deep/.el-form-item__content {
 		margin-left: 0 !important;
 	}
 </style>
