@@ -10,6 +10,7 @@ import RegExps from "./assets/RegExp" //导入正则验证规则
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/flexible.js'
+import './assets/css/base.css'
 
 Vue.use(ElementUI, {
 	size: 'small',

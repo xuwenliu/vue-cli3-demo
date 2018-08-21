@@ -1,0 +1,10 @@
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.el-input__inner {
+    padding: 0 12px;
+}

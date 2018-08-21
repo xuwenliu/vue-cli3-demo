@@ -1,16 +1,16 @@
 <template>
 	<div class="login">
 		<div class="title">登录</div>
-		<el-form class="login-form" label-position="top" label-width="40px" :model="userInfo" size="small" ref="loginForm" :rules="validateRules" status-icon>
-			<el-form-item label="账号" prop="account">
+		<el-form class="login-form" label-position="right" :model="userInfo" size="small" ref="loginForm" :rules="validateRules" status-icon>
+			<el-form-item prop="account">
 				<el-input class="input" v-model="userInfo.account" placeholder="请输入账号" required></el-input>
 			</el-form-item>
-			<el-form-item label="密码" prop="password">
+			<el-form-item prop="password">
 				<el-input type="password" class="input" v-model="userInfo.password" placeholder="请输入密码" required></el-input>
 			</el-form-item>
 			<el-form-item class="login-btn-box">
-				<el-button size="mini" type="primary" @click="login('loginForm')" :loading="loading.status">{{loading.desc}}</el-button>
-				<el-button class="register-btn" type="text" @click="goRegister">注册</el-button>
+				<el-button class="fl" size="mini" type="primary" @click="login('loginForm')" :loading="loading.status">{{loading.desc}}</el-button>
+				<el-button class="register-btn fr" type="text" @click="goRegister">暂无账号去注册</el-button>
 			</el-form-item>
 		</el-form>
 
@@ -123,20 +123,20 @@
 </script>
 <style scoped lang="less">
 	.login{
-		/*height: 100%;*/
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding-top: 2.5rem;
-		background: url('../assets/img/login_register_bg.png') center center no-repeat;
+		padding-top: 1.6rem /* 120/75 */;
+		background: url('../assets/img/login_register_bg.gif') center center no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 		.title {
-			color: #606266;
-			font-size: 20px;
-			margin-bottom: 20px;
+			color: #fff;
+			width: 6.93333rem /* 520/75 */;
+			margin: 0 auto 18px;
+			font-size:.53333rem /* 40/75 */;
 			text-align: center;
 		}
 		.login-form{
@@ -145,30 +145,23 @@
 			align-items: center;
 			flex-direction: column;
 			/deep/ .el-form-item__label {
-				padding: 0;
-				line-break: 1.5;
+				padding: 0 .32rem /* 24/75 */ 0 0;
 			}
 		}
 	}
 	.input {
-		width: 240px;
+		width: 6.93333rem /* 520/75 */;
 		display: block;
 	}
 	.login-btn-box {
-		width: 240px;
+		width: 6.93333rem /* 520/75 */;
 		/deep/ .el-form-item__content {
-			margin-left: 0 !important;
-			display:flex;
-			align-items: flex-end;
 			.register-btn {
-				flex: 1;
-				text-align: right;
-				vertical-align: bottom;
+				margin-top:.34667rem /* 26/75 */;
 			}
 		}
 		/deep/ .el-button--text {
 			padding: 0;
-			vertical-align: bottom;
 		}
 	}
 
