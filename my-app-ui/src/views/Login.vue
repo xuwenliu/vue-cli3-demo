@@ -23,22 +23,22 @@
 	export default {
 		name: 'login',
 		data() {
-			var validateAccount = (rule, value, cb) => {
+			var validateAccount = (rule, value, callback) => {
 				if(value === ''){
-					cb(new Error("请输入账号"));
+					callback(new Error("请输入账号"));
 				}else if(!this.RegExp.account.test(value)){
-					cb(new Error("请输入5-16位字母开头数字下划线"));
+					callback(new Error("请输入5-16位字母开头数字下划线"));
 				}else {
-					cb();
+					callback();
 				}
 			}
-			var validatePassword = (rule, value, cb) => {
+			var validatePassword = (rule, value, callback) => {
 				if(value === ''){
-					cb(new Error("请输入密码"));
+					callback(new Error("请输入密码"));
 				}else if(!this.RegExp.password.test(value)){
-					cb(new Error("请输入6-20位字母数字下划线"));
+					callback(new Error("请输入6-20位字母数字下划线"));
 				}else {
-					cb();
+					callback();
 				}
 			}
 

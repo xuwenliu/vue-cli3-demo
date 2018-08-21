@@ -5,11 +5,11 @@ import router from './router'
 import FastClick from 'fastclick'
 
 import axios from 'axios'
-import APP_CONFIG from "./assets/url" //导入请求地址
-import RegExps from "./assets/RegExp" //导入正则验证规则
+import APP_CONFIG from "./assets/js/url" //导入请求地址
+import RegExps from "./assets/js/RegExp" //导入正则验证规则
+import './assets/js/flexible.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import './assets/flexible.js'
 import './assets/css/base.css'
 
 Vue.use(ElementUI, {

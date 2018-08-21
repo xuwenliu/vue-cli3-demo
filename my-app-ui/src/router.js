@@ -9,7 +9,7 @@ Vue.use(Router)
 // which is lazy-loaded when the route is visited.
 export default new Router({
 	routes: [
-		{ path: '/',component: Login },
+		{ path: '/', redirect: {name: 'login'}},
 		{ path:'/login',name:'login',component: Login },
 		{ path:'/register',name:'register',component: Register },
 		{ path:'/index',name:'index',component:() => import ( /* webpackChunkName: "index" */ './views/Index.vue') },

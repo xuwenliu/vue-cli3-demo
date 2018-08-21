@@ -25,7 +25,7 @@ let TOKEN = localStorage.getItem("token");
 
 axios.interceptors.request.use(config => {
 	config.baseURL = '/api'; //设置基本请求地址，配合proxy代理使用
-	config.timeout = 60 * 1000; //设置请求超时时间
+	config.timeout = 30 * 1000; //设置请求超时时间
 	if (TOKEN) {
 		config.headers.common['Authorization'] = "Bearer " + TOKEN; //设置请求token
 	}
